@@ -1,0 +1,51 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* For the Button */
+.fly-enter {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.fly-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 300ms, opacity 300ms;
+}
+
+.fly-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.fly-exit-active {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 300ms, opacity 300ms;
+}
+
