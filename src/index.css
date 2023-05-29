@@ -10,7 +10,7 @@
 
   color-scheme: light dark;
   color: rgba(#9C4D26);
-  background-color: hwb(#343c25);
+  background-color: hwb(#202614);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,6 +18,20 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.Preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hwb(#202614);
+}
+
 
 .logo {
   margin: 2rem;
@@ -43,22 +57,22 @@ body {
 }
 
 h1 {
-  font-size: 7vw;
+  font-size: 12rem;
   line-height: 1.1;
 }
 @media (max-width: 900px) {
   h1 {
-    font-size: 10vw;
+    font-size: 20vw;
   }
 }
 
 h2 {
-  font-size: 5vw;
+  font-size: 10rem;
   line-height: 1.1;
 }
 @media (max-width: 900px) {
   h2 {
-    font-size: 10vw;
+    font-size: 18vw;
   }
 }
 text {
@@ -73,7 +87,7 @@ button {
   font-size: 2vw;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a00;
+  background-color: #202614;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -107,16 +121,16 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #2a301e;
+    color: rgba(156, 77, 38, 1);
+    background-color: #202614;
   }
   a:hover {
     color: rgba(156, 77, 38, 1);
   }
   button {
-    background-color: #343c25;
+    background-color: #202614;
   }
 }
 
@@ -126,6 +140,7 @@ button:focus-visible {
   }
 }
 
+/*Picture*/
 .w-72 {
   width: 30vw; /* 80% der Fensterbreite */
 }
@@ -196,10 +211,15 @@ header nav{
   justify-content: flex-start;
   flex-direction: column;
   gap: 1rem;
-  background-color: transparent;
+  background-color: hwb(#202614); /* Ändern Sie die Farbe und Transparenz nach Belieben */
+  backdrop-filter: blur(10px); /* Anpassen des Unschärfeeffekts */
+  -webkit-backdrop-filter: blur(10px); /* Für Safari */
   transition: 1s ease;
   transform: translateY(-100vh);
+  border-radius: 30px; /* Hinzufügen von weichen Kanten */
+  overflow: hidden; /* Sicherstellen, dass der Inhalt die Kanten nicht überlappt */
 }
+
 
 header .responsive_nav{
   transform: none;
